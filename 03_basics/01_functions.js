@@ -33,4 +33,22 @@ function loginUserMassege(username = "sam"){
 }
 
 // console.log(loginUserMassege("Saloni"));
-console.log(loginUserMassege());
+// console.log(loginUserMassege());
+
+function calculateCartPrice(val1, val2, ...num1){//rest operator (...)
+   return num1
+}
+
+// console.log(calculateCartPrice(200, 300, 400, 2000));
+
+const user = {
+    userId:  "saloni",
+    price: 199
+}
+
+function handleObject(anyObject){
+    console.log(`Username is ${anyObject.userId} ans price is ${anyObject.price}`);
+}
+
+// handleObject(user)
+
