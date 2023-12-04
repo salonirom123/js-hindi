@@ -67,3 +67,20 @@ frm.addEventListener('submit',function(e){
 })
 
 ```
+## project 3 Solution
+
+```javascript
+
+// document.getElementById('clock')
+const clc = document.querySelector('#clock')
+
+// let date = new Date();
+// console.log(date.toLocaleTimeString())
+
+setInterval(function(){
+  let date = new Date();
+  // console.log(date.toLocaleTimeString())
+  clc.innerHTML = date.toLocaleTimeString();
+},1000)
+
+```
