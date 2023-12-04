@@ -32,4 +32,38 @@ btn.forEach(function(btn) {
     }
   })
 });
+
+```
+## project 2 Solution
+
+```javascript
+
+const frm = document.querySelector('form')
+// this usecase will give you empty
+
+frm.addEventListener('submit',function(e){
+  e.preventDefault()
+
+  const ht = parseInt(document.querySelector('#height').value)
+  const wt = parseInt(document.querySelector('#weight').value)
+  const res = document.querySelector('#results')
+  if(ht === '' || ht < 0 || isNaN(ht)){
+    results.innerHTML = `please give a valid ht ${ht}`;
+  }else if(wt === '' || wt < 0 || isNaN(wt)){
+    results.innerHTML = `please give a valid ht ${wt}`;
+  }else{
+   const bmi =  ( wt / ((ht* ht) / 10000)).toFixed(2)
+  //  show the results
+  
+  if(bmi < 18){
+    results.innerHTML = `<span>Under Weight = Less than ${bmi}</span>`
+  }else if(bmi > 18 && bmi < 24){
+    results.innerHTML = `<span>NOrmal Range =  ${bmi}</span>`
+  }else{
+    results.innerHTML = `<span>OverWeight = Greater than ${bmi}</span>`
+  }
+  }
+  
+})
+
 ```
